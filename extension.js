@@ -1,7 +1,7 @@
 game.import("extension", function (lib, game, ui, get, ai, _status) {
     return {
         name: "舰R美化", content: function (config, pack) {
-            if (config.jianrmh) {
+           /*  if (config.jianrmh) {
                 lib.skill._shashanwuxietao = {
                     prompt: "将♦牌当做杀，♥牌当做桃，♣牌当做闪，♠牌当做无懈可击使用或打出(bushi)，<br>将牌当作原版的牌使用或打出。<br>响应事件只能打出对应名字的卡牌，<br>想打出让其他牌响应事件，需要视为技的帮助",
                     mod: {
@@ -15,7 +15,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 for (var i in lib.characterPack['jianrmh']) {
                     if (lib.character[i][4].indexOf("forbidai") < 0) lib.character[i][4].push("forbidai");
                 };
-            };
+            }; */
         }, precontent: function () {
             game.import('card', function () {
                 var jianrmhbao = {
@@ -4384,7 +4384,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             if (!lib.config.cards.contains('jianrmhbao')) lib.config.cards.push('jianrmhbao');//包名翻译
 
             //选项触发内容，原因见config
-        }, help: {}, config: { "jianrmh": { "name": "舰R美化", "init": false } }, package: {
+        }, help: {}, config: { /* "jianrmh": { "name": "舰R美化", "init": false } */ }, package: {
             character: {
                 character: {
                 },
