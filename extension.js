@@ -3724,7 +3724,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             audio: true,
                             image: 'ext:舰R美化/jinjuzy.jpg',
                             type: "trick",
-                            fullimage: true,
+                            //fullimage: true,
+                            fullskin: true,
                             enable: true,
                             //selectTarget: -1,
                             selectTarget: [1, Infinity],
@@ -3815,6 +3816,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             cardcolor: "red",
                             selectTarget: -1,
                             filterTarget: true,
+                            fullskin: true,
                             contentBefore: function () {
                                 "step 0"
                                 if (!targets.length) {
@@ -3994,7 +3996,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     multitarget: 1,
                                 },
                             },
-                            fullimage: true,
+                            //fullimage: true,
                         },
                         mingzuyq: {
                             image: 'ext:舰R美化/mingzuyq.jpg',
@@ -4008,6 +4010,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             nomod: true,
                             nopower: true,
                             unique: true,
+                            fullskin: true,
                             global: "g_dinglanyemingzhu_ai",
                             skills: ["dinglanyemingzhu_skill"],
                             ai: {
@@ -4072,13 +4075,14 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 if (cards.length && get.position(cards[0], true) == 'o') target.equip(cards[0]);
                             },
                             toself: true,
-                            fullimage: true,
+                            //fullimage: true,
                         },
                         hangkongzhan: {
                             audio: "ext:舰R美化/audio/skill:true",
-                            image: 'ext:舰R美化/hangkongzhan.jpg',
+                            image: 'ext:舰R美化/hangkongzhan.png',
                             type: "equip",
                             subtype: "equip4",
+                            fullskin: true,
                             distance: {
                                 attackFrom: -1,
                             },
@@ -4135,7 +4139,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 if (cards.length && get.position(cards[0], true) == 'o') target.equip(cards[0]);
                             },
                             toself: true,
-                            fullimage: true,
+                            //fullimage: true,
                         },
                         paohuozb: {
                             image: 'ext:舰R美化/paohuozb.png',
@@ -4205,6 +4209,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             image: 'ext:舰R美化/qiangliguibi.png',
                             type: "equip",
                             subtype: "equip3",
+                            fullskin: true,
                             ai: {
                                 basic: {
                                     equipValue: 7.5,
@@ -4258,13 +4263,13 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 if (cards.length && get.position(cards[0], true) == 'o') target.equip(cards[0]);
                             },
                             toself: false,
-                            fullskin: true,
                         },
                         lianxugongji: {
-                            image: 'ext:舰R美化/yishichuanjiadan.jpg',
+                            image: 'ext:舰R美化/yishichuanjiadan.png',
                             type: "basic",
                             enable: true,
                             selectTarget: 1,
+                            fullskin: true,
                             filter: function (event, player) { return player.canUse('sha'); },
                             filterTarget: function (card, player, target) { return target != player && player.canUse('sha', target); },
                             content: function () {
@@ -4299,7 +4304,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     player: 1,
                                 },
                             },
-                            fullimage: true,
+                            //fullimage: true,
                         },
                     },
                     skill: {
