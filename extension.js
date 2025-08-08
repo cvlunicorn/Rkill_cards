@@ -4646,7 +4646,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             "_priority": 0,
                         },
-                        changshecheng9: {
+                        changshecheng: {
                             equipSkill: true,
                             audio: true,
                             firstDo: true,
