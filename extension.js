@@ -191,7 +191,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     if (get.is.changban()) {
                                         player.addTempSkill('bingliang_changban');
                                     } else {
-                                        lib.animate.skill['bingliang'].call(player, 'bingliang');
+                                        //lib.animate.skill['bingliang'].call(player, 'bingliang');
                                         player.skip('phaseDraw');
                                     }
                                 }
@@ -975,7 +975,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             effect: function () {
                                 if (result.bool == false) {
-                                    lib.animate.skill['lebu'].call(player, 'lebu');
+                                    //lib.animate.skill['lebu'].call(player, 'lebu');
                                     player.skip('phaseUse');
                                 }
                             },
