@@ -4299,7 +4299,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 }*/
                             },
                             ai: {
-                                order: 5,
+                                 basic: {
+                                        order: 5,
+                                        useful: 2,
+                                        value: 6,
+                                    },
                                 result: {
                                     player: 1,
                                 },
@@ -4801,7 +4805,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 basic: {
                                     order: 8.5,
                                     useful: 1,
-                                    value: 7,
+                                    value: 9.5,
                                 },
                                 wuxie: function (target, card, player, viewer) {
                                     if (get.attitude(viewer, target) > 0 && target.countCards('h', 'shan')) {
