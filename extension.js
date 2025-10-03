@@ -4315,7 +4315,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     skill: {
                         "paohuozb_skill": {
                             mod: {
-                                maxHandcard: function (player, num) { return num + 1; },
+                                maxHandcard: function (player, num) { return num - 1; },
                                 cardUsable: function (card, player, num) { if (card.name == 'sha') return num + 1; },
                             },
                             trigger: {
@@ -4327,7 +4327,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 return event.card.name == 'paohuozb';
                             },
                             content: function () {
-                                player.loseHp();
+                                //player.loseHp();
                             },
                             intro: {
                                 content: function () {
@@ -5062,7 +5062,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         hangkongzhan: "航空战",
                         "hangkongzhan_info": "建树丰厚，参与每轮开始时的三连杀战斗吗，每轮最多弃置三张牌。",
                         paohuozb: "炮火准备",
-                        "paohuozb_info": "装备时流失一点体力。你的杀的使用次数+1，手牌上限+1。",
+                        "paohuozb_info": "你的杀的使用次数+1，手牌上限-1。",
                         "paohuozb_skill": "炮火准备1", "paohuozb_skill_info": "装备技能",
                         qiangliguibi: "强力规避",
                         "qiangliguibi_info": "可以进行一次判定，为桃、闪则视为打出闪。<br>若判定未生效,会获得判定牌。<br>若武将为驱逐且没有判定成功，可以额外触发一次。",
