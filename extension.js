@@ -1,6 +1,6 @@
 game.import("extension", function (lib, game, ui, get, ai, _status) {
     return {
-        name: "舰R美化", 
+        name: "舰R美化",
         content: function (config, pack) {
             /*  if (config.jianrmh) {
                  lib.skill._shashanwuxietao = {
@@ -4306,7 +4306,64 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     value: 6,
                                 },
                                 result: {
-                                    player: 1,
+                                    target: function (player, target, card, isLink) {
+                                        let eff = -2.5,
+                                            odds = 1.35,
+                                            num = 1;
+                                        if (isLink) {
+                                            let cache = _status.event.getTempCache("sha_result", "eff");
+                                            if (typeof cache !== "object" || cache.card !== get.translation(card))
+                                                return eff;
+                                            if (cache.odds < 1.35 && cache.bool) return 1.35 * cache.eff;
+                                            return cache.odds * cache.eff;
+                                        }
+                                        if (
+                                            player.hasSkill("jiu") ||
+                                            player.hasSkillTag("damageBonus", true, {
+                                                target: target,
+                                                card: card,
+                                            })
+                                        ) {
+                                            num = 2;
+                                            if (get.attitude(player, target) > 0) eff = -10;
+                                            else eff = -7;
+                                        }
+                                        if (
+                                            !player.hasSkillTag(
+                                                "directHit_ai",
+                                                true,
+                                                {
+                                                    target: target,
+                                                    card: card,
+                                                },
+                                                true
+                                            )
+                                        )
+                                            odds -=
+                                                0.7 *
+                                                target.mayHaveShan(
+                                                    player,
+                                                    "use",
+                                                    target.getCards("h", (i) => {
+                                                        return i.hasGaintag("sha_notshan");
+                                                    }),
+                                                    "odds"
+                                                );
+                                        _status.event.putTempCache("sha_result", "eff", {
+                                            bool: target.hp > num && get.attitude(player, target) > 0,
+                                            card: get.translation(card),
+                                            eff: eff,
+                                            odds: odds,
+                                        });
+                                        return odds * eff;
+                                    },
+                                },
+                                tag: {
+                                    respond: 1,
+                                    respondShan: 1,
+                                    damage: function (card) {
+                                        return 2;
+                                    },
                                 },
                             },
                             //fullimage: true,
