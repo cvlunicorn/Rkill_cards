@@ -4301,7 +4301,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             ai: {
                                 basic: {
-                                    order: 5,
+                                    order: function (item, player) {
+                                        return get.order({ name: 'sha' }) - 0.5;
+                                    },
                                     useful: 2,
                                     value: 6,
                                 },
