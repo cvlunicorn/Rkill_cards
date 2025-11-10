@@ -5041,7 +5041,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "sheji9_info": "出牌阶段，对你攻击范围内的一名角色使用。其须使用一张【闪】，否则你对其造成1点伤害。",
                         "jingjieleida9": "警戒雷达",
                         "jingjieleida9_info": "当你需要使用或打出一张【闪】时，你可以进行判定。若结果为红色，则你视为使用或打出一张【闪】。",
-                        "jimihuowu9": "台风",
+                        "jimihuowu9": "机密货物",
                         "jimihuowu9_info": "出牌阶段，对自己使用。若判定结果为黑桃2~9，则目标角色受到3点雷电伤害。若判定不为黑桃2~9，将之移动到下家的判定区里。",
                         "zhanlipin9": "顺走战利品",
                         "zhanlipin9_info": "出牌阶段，对距离为1且区域里有牌的一名其他角色使用。你获得其区域里的一张牌。",
