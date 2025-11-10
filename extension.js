@@ -9,7 +9,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                          cardname: function (card, player, name) {
                              if (card.name == 'sheji9') { return 'sha'; }; if (card.name == 'huibi9') { return 'shan'; }; if (card.name == 'zhikongquan9') { return 'wuxie'; }; if (card.name == 'kuaixiu9') { return 'tao'; }; if (card.name == 'zziqi9') { return 'jiu'; };
                              if (card.name == 'juedouba9') { return 'juedou'; };
-                             if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'nobuji9') { return 'bingliang'; }; if (card.name == 'taifeng9') { return 'shandian'; };
+                             if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'nobuji9') { return 'bingliang'; }; if (card.name == 'jimihuowu9') { return 'shandian'; };
                          },
                      },
                  };
@@ -23,8 +23,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     name: 'jianrmhbao',//卡包命名
                     connect: true,//卡包是否可以联机
                     card: {
-                        "huibida9": {
-                            image: 'ext:舰R美化/huibida9.png',
+                        "jingjieleida9": {
+                            image: 'ext:舰R美化/jingjieleida9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip2",
@@ -1227,8 +1227,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "xiaolishe9": {
-                            image: 'ext:舰R美化/xiaolishe9.png',
+                        "jianzaihuojiandan9": {
+                            image: 'ext:舰R美化/jianzaihuojiandan9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -1667,8 +1667,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "taifeng9": {
-                            image: 'ext:舰R美化/taifeng9.png',
+                        "jimihuowu9": {
+                            image: 'ext:舰R美化/jimihuowu9.png',
                             audio: true,
                             fullskin: true,
                             type: "delay",
@@ -4551,7 +4551,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 player.chooseToUse(get.prompt('qinglong', trigger.target), function (card, player, event) {
                                     if (get.name(card) != 'sha' && get.name(card) != 'sheji9') return false;
                                     if (!player.hasSkill('qinglong_skill_R', null, false)) {
-                                        var cards = player.getEquips('xiaolishe9');
+                                        var cards = player.getEquips('jianzaihuojiandan9');
                                         if (!cards.some(card2 => card2 != card && !ui.selected.cards.contains(card2))) return false;
                                     }
                                     return lib.filter.filterCard.apply(this, arguments);
@@ -5033,16 +5033,16 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "huojiandan9_info": "当你使用【射击】对目标角色造成伤害时，你可以弃置其装备区里的一张坐骑牌。",
                         "chuanjiayl9": "穿甲鱼雷",
                         "chuanjiayl9_info": "锁定技，当你使用【射击】指定一名目标角色后，你令其防具技能无效直到此【射击】被抵消或造成伤害。",
-                        "xiaolishe9": "效力射",
-                        "xiaolishe9_info": "当你使用的【射击】被目标角色使用的【闪】抵消时，你可以对其使用一张【射击】（无距离限制）。",
+                        "jianzaihuojiandan9": "火箭弹",
+                        "jianzaihuojiandan9_info": "当你使用的【射击】被目标角色使用的【闪】抵消时，你可以对其使用一张【射击】（无距离限制）。",
                         "qingjia9": "黑色装甲",
                         "qingjia9_info": "锁定技，黑色的射击对你无效",
                         "sheji9": "射击",
                         "sheji9_info": "出牌阶段，对你攻击范围内的一名角色使用。其须使用一张【闪】，否则你对其造成1点伤害。",
-                        "huibida9": "回避(八卦)",
-                        "huibida9_info": "当你需要使用或打出一张【闪】时，你可以进行判定。若结果为红色，则你视为使用或打出一张【闪】。",
-                        "taifeng9": "台风",
-                        "taifeng9_info": "出牌阶段，对自己使用。若判定结果为黑桃2~9，则目标角色受到3点雷电伤害。若判定不为黑桃2~9，将之移动到下家的判定区里。",
+                        "jingjieleida9": "警戒雷达",
+                        "jingjieleida9_info": "当你需要使用或打出一张【闪】时，你可以进行判定。若结果为红色，则你视为使用或打出一张【闪】。",
+                        "jimihuowu9": "台风",
+                        "jimihuowu9_info": "出牌阶段，对自己使用。若判定结果为黑桃2~9，则目标角色受到3点雷电伤害。若判定不为黑桃2~9，将之移动到下家的判定区里。",
                         "zhanlipin9": "顺走战利品",
                         "zhanlipin9_info": "出牌阶段，对距离为1且区域里有牌的一名其他角色使用。你获得其区域里的一张牌。",
                         "kuaixiu9": "快修",
@@ -5185,8 +5185,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["heart", 12, "kuaixiu9"],
                         ["diamond", 12, "kuaixiu9"],
 
-                        ["spade", 2, "huibida9"],
-                        ["club", 2, "huibida9"],
+                        ["spade", 2, "jingjieleida9"],
+                        ["club", 2, "jingjieleida9"],
                         ["spade", 5, "donglixj9"],
                         ["club", 5, "micaiwz9"],
                         ["heart", 13, "gaojingld9"],
@@ -5197,7 +5197,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["diamond", 1, "sushepao9"],
                         ["spade", 2, "caiseyulei9"],
                         ["spade", 6, "chuanjiayl9"],
-                        ["spade", 5, "xiaolishe9"],
+                        ["spade", 5, "jianzaihuojiandan9"],
                         ["spade", 12, "yingjizp9"],
                         ["diamond", 5, "shangyouyh9"],
                         ["diamond", 12, "bigseven9"],
@@ -5236,10 +5236,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["spade", 6, 'leibusigang9'],
                         ["club", 6, 'leibusigang9'],
                         ["heart", 6, 'leibusigang9'],
-                        ["spade", 1, 'taifeng9'],
+                        ["spade", 1, 'jimihuowu9'],
                         ["spade", 2, 'chuanjiadan9'],
                         ["club", 2, 'qingjia9'],
-                        ["heart", 12, 'taifeng9'],
+                        ["heart", 12, 'jimihuowu9'],
                         ["diamond", 12, 'zhikongquan9'],
                         ["heart", 4, "sheji9", "fire"],
                         ["heart", 7, "sheji9", "fire"],
