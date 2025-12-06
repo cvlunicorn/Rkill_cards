@@ -452,7 +452,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     },
                                 },
                             },
-                            skills: ["duanbing_R"],
+                            skills: ["fangtian_guozhan_R"],
                             enable: true,
                             selectTarget: -1,
                             filterTarget: function (card, player, target) {
@@ -4650,6 +4650,73 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             "_priority": -25,
                         },
+                        fangtian_guozhan_R: {
+                            equipSkill: true,
+                            trigger: { player: "useCard2" },
+                            filter: function (event, player) {
+                                if (event.card.name != "sha") return false;
+                                return game.hasPlayer(function (target) {
+                                    if (event.targets.includes(target)) return false;
+                                    if (!lib.filter.filterTarget(event.card, player, target)) return false;
+                                    return player.countCards("h") < target.countCards("h");
+                                });
+                            },
+                            direct: true,
+                            content: function () {
+                                "step 0";
+                                player
+                                    .chooseTarget(
+                                        get.prompt2("fangtian_guozhan_R"),
+                                        [1, 3],
+                                        function (card, player, target) {
+                                            var cardx = _status.event.cardx;
+                                            if (!lib.filter.filterTarget(cardx, player, target)) return false;
+                                            var targets = _status.event.targets.slice(0).concat(ui.selected.targets);
+                                            if (targets.includes(target)) return false;
+                                            return player.countCards("h") < target.countCards("h");
+                                        }
+                                    )
+                                    .set("promptbar", "none")
+                                    .set("cardx", trigger.card)
+                                    .set("targets", trigger.targets)
+                                    .set("ai", function (target) {
+                                        var player = _status.event.player;
+                                        return get.effect(target, _status.event.cardx, player, player);
+                                    });
+                                "step 1";
+                                if (result.bool) {
+                                    player.logSkill("fangtian_guozhan_R", result.targets);
+                                    if (!player.storage.fangtian_guozhan_R_trigger)
+                                        player.storage.fangtian_guozhan_R_trigger = [];
+                                    player.storage.fangtian_guozhan_R_trigger.add(trigger.card);
+                                    trigger.targets.addArray(result.targets);
+                                    player.addTempSkill("fangtian_guozhan_R_trigger");
+                                }
+                            },
+                        },
+                        fangtian_guozhan_R_trigger: {
+                            trigger: { player: "shaMiss" },
+                            silent: true,
+                            onremove: true,
+                            content: function () {
+                                if (player.storage[event.name].includes(trigger.card))
+                                    trigger.getParent().excluded.addArray(trigger.getParent().targets);
+                            },
+                            group: "fangtian_guozhan_R_remove",
+                        },
+                        fangtian_guozhan_R_remove: {
+                            trigger: { player: ["useCardAfter", "useCardCancelled"] },
+                            silent: true,
+                            filter: function (event, player) {
+                                return (
+                                    player.storage.fangtian_guozhan_R_trigger &&
+                                    player.storage.fangtian_guozhan_R_trigger.includes(event.card)
+                                );
+                            },
+                            content: function () {
+                                player.storage.fangtian_guozhan_R_trigger.remove(trigger.card);
+                            },
+                        },
                         duanbing_R: {
                             equipSkill: true,
                             trigger: {
@@ -5101,8 +5168,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "tiejia3_info": "锁定技，【南蛮入侵】、【万箭齐发】、普通【杀】和火【杀】对你无效。当你需要响应雷杀时需要出两张闪，受到雷电伤害时，该伤害+1。",
                         "tiejia4": "铁甲4",
                         "tiejia4_info": "锁定技，【南蛮入侵】、【万箭齐发】、普通【杀】和火【杀】对你无效。当你需要响应雷杀时需要出两张闪，受到雷电伤害时，该伤害+1。",
-                        duanbing_R: "BigSeven",
-                        duanbing_R_info: "当你使用杀指定目标后，你可令一名距离为一的角色也成为此杀目标。",
+                        fangtian_guozhan_R: "BigSeven",
+                        fangtian_guozhan_R_info: "当你使用杀指定目标后，你可额外指定至多三名手牌数大于你的角色也成为此杀目标，若任意一名角色使用闪抵消了此【杀】，则此【杀】对其余角色也无效。",
 
                         "changshecheng": "长射程",
                         "changshecheng_info": "锁定技，你于出牌阶段内使用【射击】的次数+1。",
@@ -5301,8 +5368,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         //舰r牌将移植
                         ["heart", 1, "hangkongzhan"],
                         ["diamond", 1, "qiangliguibi"],
-                        ["spade", 1, "lianxugongji"],
-                        ["club", 1, "jinjuzy"],
+                        //["spade", 1, "lianxugongji"],
+                        //["club", 1, "jinjuzy"],
                         ["heart", 1, "jiakongls"],
                         ["spade", 1, "paohuozb"],
                         //舰r牌将牌堆移植结束
