@@ -4448,7 +4448,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                                 order(item, player) {
                                     if (player && _status.event.type == "phase") {
-                                        return max;
+                                        return 1;
                                     }
                                     return 1.1;
                                 },
