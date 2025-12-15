@@ -4372,6 +4372,94 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         },
                     },
                     skill: {
+                        _kapaizhuanhua_muniu: {
+                            enable: ["chooseToUse", "chooseToRespond"],
+                            viewAs(cards, player) {
+                                if (cards.length) {
+                                    var name = false,
+                                        nature = null;
+                                    switch (get.name(cards[0], player)) {
+                                        case "huibi9":
+                                            name = "shan";
+                                            break;
+                                        case "sheji9":
+                                            name = "sha";
+                                            nature = get.nature(cards[0], player);
+                                            break;
+                                        case "zhikongquan9":
+                                            name = "wuxie";
+                                            break;
+                                        case "kuaixiu9":
+                                            name = "tao";
+                                            break;
+                                        case "Zziqi9":
+                                            name = "jiu";
+                                            break;
+                                    }
+                                    if (name) return { name: name, nature: nature };
+                                }
+                                return null;
+                            },
+                            check(card) {
+                                return 1;
+                            },
+                            position: "s",
+                            filterCard(card, player, event) {
+                                event = event || _status.event;
+                                var filter = event._backup.filterCard;
+                                var name = get.name(card, player);
+                                var nature = get.nature(card, player);
+                                if (name == "shan" && filter({ name: "shan", cards: [card] }, player, event)) return true;
+                                if (name == "sha" && filter({ name: "sha", cards: [card], nature: nature }, player, event)) return true;
+                                if (name == "wuxie" && filter({ name: "wuxie", cards: [card] }, player, event)) return true;
+                                if (name == "tao" && filter({ name: "tao", cards: [card] }, player, event)) return true;
+                                if (name == "jiu" && filter({ name: "jiu", cards: [card] }, player, event)) return true;
+                                return false;
+                            },
+                            filter(event, player) {
+                                var filter = event.filterCard;
+                                if (filter(get.autoViewAs({ name: "sha" }, "unsure"), player, event) && player.countCards("s", { name: "sheji9" })) return true;
+                                if (filter(get.autoViewAs({ name: "shan" }, "unsure"), player, event) && player.countCards("s", { name: "huibi9" })) return true;
+                                if (filter(get.autoViewAs({ name: "tao" }, "unsure"), player, event) && player.countCards("s", { name: "kuaixiu9" })) return true;
+                                if (filter(get.autoViewAs({ name: "wuxie" }, "unsure"), player, event) && player.countCards("s", { name: "zhikongquan9" })) return true;
+                                if (filter(get.autoViewAs({ name: "jiu" }, "unsure"), player, event) && player.countCards("s", { name: "Zziqi9" })) return true;
+                                return false;
+                            },
+                            precontent() {
+                                delete event.result.skill;
+                            },
+                            ai: {
+                                respondSha: true,
+                                respondShan: true,
+                                skillTagFilter(player, tag) {
+                                    var name;
+                                    switch (tag) {
+                                        case "respondSha":
+                                            name = "sheji9";
+                                            break;
+                                        case "respondShan":
+                                            name = "huibi9";
+                                            break;
+                                        case "save":
+                                            name = "kuaixiu9";
+                                            break;
+                                    }
+                                    if (!player.countCards("s", { name: name })) return false;
+                                },
+                                order(item, player) {
+                                    if (player && _status.event.type == "phase") {
+                                        return max;
+                                    }
+                                    return 1.1;
+                                },
+                            },
+                            hiddenCard(player, name) {
+                                if (name == "wuxie" && _status.connectMode && player.countCards("s") > 0) return true;
+                                if (name == "wuxie") return player.countCards("s", { name: "zhikongquan9" }) > 0;
+                                if (name == "tao") return player.countCards("s", { name: "kuaixiu9" }) > 0;
+                            },
+                            "_priority": 0,
+                        },
                         "paohuozb_skill": {
                             mod: {
                                 maxHandcard: function (player, num) { return num - 1; },
@@ -5068,6 +5156,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 
                     },
                     translate: {
+                        "_kapaizhuanhua_muniu": "木牛卡牌",
                         "huibi9": "回避",
                         "huibi9_info": "抵消一张【射击】",
                         "puliesai9": "防雷装甲",
