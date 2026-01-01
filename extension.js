@@ -3339,14 +3339,13 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     if (!next) return false;
                                     return target == next || target.inline(next);
                                 }
-                                if (player == target) return false;
                                 if (game.hasPlayer(function (current) {
-                                    return current.isLinked() && current != player;
+                                    return current.isLinked();
                                 })) {
                                     if (!target.isLinked()) return false;
                                     var distance = get.distance(player, target, 'absolute');
                                     return !game.hasPlayer(function (current) {
-                                        if (target != current && current != player && current.isLinked()) {
+                                        if (current.isLinked()) {
                                             var dist = get.distance(player, current, 'absolute');
                                             if (dist < distance) {
                                                 return true;
@@ -3358,17 +3357,22 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     });
                                 }
                                 else {
-                                    var dist = get.distance(player, target);
-                                    return !game.hasPlayer(function (current) {
-                                        return current != player && get.distance(player, current) < dist
-                                    });
+                                    return !target.isLinked();
                                 }
                             },
                             enable: true,
-                            selectTarget: -1,
+                            selectTarget: function () {
+                                if (get.mode() == "guozhan") return -1;
+                                if (game.hasPlayer(function (current) {
+                                    return current.isLinked();
+                                })) return -1;
+                                return [1, 2];
+
+                            },
                             modTarget: true,
                             content: function () {
-                                target.damage('fire', event.baseDamage || 1);
+                                if (target.isLinked()) target.damage('fire', event.baseDamage || 1);
+                                if (!target.isLinked()) target.link();
                             },
                             ai: {
                                 order: 5,
@@ -3383,7 +3387,39 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                         if (target.hasSkillTag('nofire') || target.hasSkillTag('nodamage')) return 0;
                                         if (target.hasSkill('xuying') && target.countCards('h') == 0) return 0;
                                         if (!target.isLinked()) {
-                                            return get.damageEffect(target, player, target, 'fire');
+                                            if (target.hasSkillTag("link")) return 0;
+                                            let curs = game.filterPlayer((current) => {
+                                                if (current.hasSkillTag("nodamage")) return false;
+                                                return !current.hasSkillTag("nofire") || !current.hasSkillTag("nothunder");
+                                            });
+                                            if (curs.length < 2) return 0;
+                                            let f = target.hasSkillTag("nofire"),
+                                                t = target.hasSkillTag("nothunder"),
+                                                res = 0.9;
+                                            if ((f && t) || target.hasSkillTag("nodamage")) return 0;
+                                            if (f || t) res = 0.45;
+                                            if (!f && target.getEquip("tengjia")) res *= 2;
+                                            if (!target.isLinked()) res = -res;
+                                            if (ui.selected.targets.length) return res;
+                                            let fs = 0,
+                                                es = 0,
+                                                att = get.attitude(player, target),
+                                                linkf = false,
+                                                alink = true;
+                                            curs.forEach((i) => {
+                                                let atti = get.attitude(player, i);
+                                                if (atti > 0) {
+                                                    fs++;
+                                                    if (i.isLinked()) linkf = true;
+                                                } else if (atti < 0) {
+                                                    es++;
+                                                    if (!i.isLinked()) alink = false;
+                                                }
+                                            });
+                                            if (es < 2 && !alink) {
+                                                if (att <= 0 || (att > 0 && linkf && fs < 2)) return 0;
+                                            }
+                                            return res;
                                         }
                                         return game.countPlayer(function (current) {
                                             if (current.isLinked()) {
@@ -5238,7 +5274,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         xunyou9: "皇家巡游",
                         "xunyou9_info": "出牌阶段，对所有角色使用。（选择目标后）你从牌堆顶亮出等同于目标数量的牌，每名目标角色获得这些牌中（剩余的）的任意一张。",
                         "paohuofg9": "炮火覆盖",
-                        "paohuofg9_info": "对离你最近的一名横置角色使用（若无横置角色则改为对距离你最近的所有角色使用），对目标造成一点火焰伤害",
+                        "paohuofg9_info": "当场上没有横置角色时，你可以选择1~2名角色横置；当场上有横置角色时，对离你最近的一名横置角色(可能是自己）使用，对目标造成一点火焰伤害。",
                         "micaiwz9": "迷彩伪装",
                         "micaiwz9_info": "锁定技，其他角色计算与你的距离+1。",
                         "gaojingld9": "雷达告警",
