@@ -2233,6 +2233,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             chongzhu: true,
                             ai: {
                                 wuxie: function (target, card, player, viewer) {
+                                    if (get.attitude(viewer, player._trueMe || player) > 0) return 0;
                                     if (_status.event.getRand() < 0.5) return 0;
                                     if (!target.hasSkill('tengjia2') && get.attitude(viewer, player) > 0) {
                                         return 0;
