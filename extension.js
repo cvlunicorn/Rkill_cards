@@ -9,7 +9,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                          cardname: function (card, player, name) {
                              if (card.name == 'sheji9') { return 'sha'; }; if (card.name == 'huibi9') { return 'shan'; }; if (card.name == 'zhikongquan9') { return 'wuxie'; }; if (card.name == 'kuaixiu9') { return 'tao'; }; if (card.name == 'zziqi9') { return 'jiu'; };
                              if (card.name == 'juedouba9') { return 'juedou'; };
-                             if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'nobuji9') { return 'bingliang'; }; if (card.name == 'jimihuowu9') { return 'shandian'; };
+                             if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'pojiaoxiji9') { return 'bingliang'; }; if (card.name == 'jimihuowu9') { return 'shandian'; };
                          },
                      },
                  };
@@ -24,7 +24,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     connect: true,//卡包是否可以联机
                     card: {
                         "jingjieleida9": {
-                            image: 'ext:舰R美化/jingjieleida9.png',
+                            image: 'ext:舰R美化/image/jingjieleida9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip2",
@@ -83,8 +83,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
 
                         },
-                        "puliesai9": {
-                            image: 'ext:舰R美化/puliesai9.png',
+                        "fangleizhuangjia9": {
+                            image: 'ext:舰R美化/image/fangleizhuangjia9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip2",
@@ -168,8 +168,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "nobuji9": {
-                            image: 'ext:舰R美化/nobuji9.png',
+                        "pojiaoxiji9": {
+                            image: 'ext:舰R美化/image/pojiaoxiji9.png',
                             audio: true,
                             fullskin: true,
                             type: "delay",
@@ -220,8 +220,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             allowMultiple: false,
                         },
-                        "dongli9": {
-                            image: 'ext:舰R美化/dongli9.png',
+                        "dongligailiang9": {
+                            image: 'ext:舰R美化/image/dongligailiang9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip4",
@@ -281,8 +281,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "jiaohuan9": {
-                            image: 'ext:舰R美化/jiaohuan9.png',
+                        "kuaidixiang9": {
+                            image: 'ext:舰R美化/image/kuaidixiang9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip3",
@@ -343,7 +343,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "fayantong9": {
-                            image: 'ext:舰R美化/fayantong9.png',
+                            image: 'ext:舰R美化/image/fayantong9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip3",
@@ -404,7 +404,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "bigseven9": {
-                            image: 'ext:舰R美化/bigseven9.png',
+                            image: 'ext:舰R美化/image/bigseven9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -465,8 +465,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "shangyouyh9": {
-                            image: 'ext:舰R美化/shangyouyh9.png',
+                        "shangyouyihao9": {
+                            image: 'ext:舰R美化/image/shangyouyihao9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -532,7 +532,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "xiji9": {
-                            image: 'ext:舰R美化/xiji9.png',
+                            image: 'ext:舰R美化/image/xiji9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -617,8 +617,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "chuanjiadan9": {
-                            image: 'ext:舰R美化/chuanjiadan9.png',
+                        "chaozhongdan9": {
+                            image: 'ext:舰R美化/image/chaozhongdan9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -680,7 +680,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "zziqi9": {
-                            image: 'ext:舰R美化/zziqi9.png',
+                            image: 'ext:舰R美化/image/zziqi9.png',
                             audio: true,
                             fullskin: true,
                             type: "basic",
@@ -805,7 +805,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "juedouba9": {
-                            image: 'ext:舰R美化/juedouba9.png',
+                            image: 'ext:舰R美化/image/juedouba9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -959,7 +959,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             selectTarget: 1,
                         },
                         "leibusigang9": {
-                            image: 'ext:舰R美化/leibusigang9.png',
+                            image: 'ext:舰R美化/image/leibusigang9.png',
                             audio: true,
                             fullskin: true,
                             type: "delay",
@@ -1009,8 +1009,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             allowMultiple: false,
                         },
-                        "manchangyy9": {
-                            image: 'ext:舰R美化/manchangyy9.png',
+                        "manchangyiyi9": {
+                            image: 'ext:舰R美化/image/manchangyiyi9.png',
                             audio: true,
                             type: "trick",
                             enable: true,
@@ -1103,8 +1103,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             fullskin: true,
                         },
-                        "huojiandan9": {
-                            image: 'ext:舰R美化/huojiandan9.png',
+                        "duantuihuojian9": {
+                            image: 'ext:舰R美化/image/duantuihuojian9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -1165,8 +1165,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "chuanjiayl9": {
-                            image: 'ext:舰R美化/chuanjiayl9.png',
+                        "chuanjiayulei9": {
+                            image: 'ext:舰R美化/image/chuanjiayulei9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -1228,7 +1228,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "jianzaihuojiandan9": {
-                            image: 'ext:舰R美化/jianzaihuojiandan9.png',
+                            image: 'ext:舰R美化/image/jianzaihuojiandan9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -1292,8 +1292,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "qingjia9": {
-                            image: 'ext:舰R美化/qingjia9.png',
+                        "heisezhuangjia9": {
+                            image: 'ext:舰R美化/image/heisezhuangjia9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip2",
@@ -1352,7 +1352,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "sheji9": {
-                            image: 'ext:舰R美化/sheji9.png',
+                            image: 'ext:舰R美化/image/sheji9.png',
                             audio: true,
                             global: ["shashanwuxietao"],
                             nature: ["thunder", "fire", "kami", "ice"],
@@ -1621,7 +1621,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         },
                         "huibi9": {
                             global: ["shashanwuxietao"],
-                            image: 'ext:舰R美化/huibi9.png',
+                            image: 'ext:舰R美化/image/huibi9.png',
                             audio: true,
                             fullskin: true,
                             type: "basic",
@@ -1668,7 +1668,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "jimihuowu9": {
-                            image: 'ext:舰R美化/jimihuowu9.png',
+                            image: 'ext:舰R美化/image/jimihuowu9.png',
                             audio: true,
                             fullskin: true,
                             type: "delay",
@@ -1764,7 +1764,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             allowMultiple: false,
                         },
                         "zhanlipin9": {
-                            image: 'ext:舰R美化/zhanlipin9.png',
+                            image: 'ext:舰R美化/image/zhanlipin9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -1831,7 +1831,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "kuaixiu9": {
-                            image: 'ext:舰R美化/kuaixiu9.png',
+                            image: 'ext:舰R美化/image/kuaixiu9.png',
                             fullskin: true,
                             type: "basic",
                             autoViewAs: "tao",
@@ -2058,7 +2058,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "jingjixiuli9": {
-                            image: 'ext:舰R美化/jingjixiuli9.png',
+                            image: 'ext:舰R美化/image/jingjixiuli9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -2112,8 +2112,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "zhongjia9": {
-                            image: 'ext:舰R美化/zhongjia9.png',
+                        "zhongxingzhuangjia9": {
+                            image: 'ext:舰R美化/image/zhongxingzhuangjia9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip2",
@@ -2215,8 +2215,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "lastfriend9": {
-                            image: 'ext:舰R美化/lastfriend9.png',
+                        "zuihoudeduiyou9": {
+                            image: 'ext:舰R美化/image/zuihoudeduiyou9.png',
                             audio: true,
                             type: "trick",
                             enable: true,
@@ -2275,8 +2275,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             fullskin: true,
                         },
-                        "zhiyuangj9": {
-                            image: 'ext:舰R美化/zhiyuangj9.png',
+                        "zhiyuangongji9": {
+                            image: 'ext:舰R美化/image/zhiyuangongji9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -2377,7 +2377,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         },
                         "zhikongquan9": {
                             global: ["shashanwuxietao"],
-                            image: 'ext:舰R美化/zhikongquan9.png',
+                            image: 'ext:舰R美化/image/zhikongquan9.png',
                             autoViewAs: "wuxie",
                             audio: true,
                             fullskin: true,
@@ -2453,7 +2453,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "ewaibuji9": {
-                            image: 'ext:舰R美化/ewaibuji9.png',
+                            image: 'ext:舰R美化/image/ewaibuji9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -2495,7 +2495,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "sushepao9": {
-                            image: 'ext:舰R美化/sushepao9.png',
+                            image: 'ext:舰R美化/image/sushepao9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -2581,7 +2581,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "changshecheng9": {
-                            image: 'ext:舰R美化/changshecheng9.png',
+                            image: 'ext:舰R美化/image/changshecheng9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -2656,7 +2656,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     },
                                 },
                             },
-                            skills: ["changshecheng"],
+                            skills: ["changshecheng9"],
                             enable: true,
                             selectTarget: -1,
                             filterTarget: function (card, player, target) {
@@ -2670,7 +2670,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                         },
                         "gaobaodan9": {
-                            image: 'ext:舰R美化/gaobaodan9.png',
+                            image: 'ext:舰R美化/image/gaobaodan9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -2731,8 +2731,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "chaozhongdan9": {
-                            image: 'ext:舰R美化/chaozhongdan9.png',
+                        "baoleiqixi9": {
+                            image: 'ext:舰R美化/image/baoleiqixi9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -2793,8 +2793,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "caiseyulei9": {
-                            image: 'ext:舰R美化/caiseyulei9.png',
+                        "qipaichuanjiadan9": {
+                            image: 'ext:舰R美化/image/qipaichuanjiadan9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -2857,7 +2857,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         },
 
                         "zhenchaji9": {
-                            image: 'ext:舰R美化/zhenchaji9.png',
+                            image: 'ext:舰R美化/image/zhenchaji9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip5",
@@ -2919,8 +2919,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "donglixj9": {
-                            image: 'ext:舰R美化/donglixj9.png',
+                        "donglixianjin9": {
+                            image: 'ext:舰R美化/image/donglixianjin9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip4",
@@ -2981,7 +2981,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                         "zhaomingdan9": {
-                            image: 'ext:舰R美化/zhaomingdan9.png',
+                            image: 'ext:舰R美化/image/zhaomingdan9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -3080,8 +3080,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             selectTarget: 1,
                         },
-                        "c17dipai": {
-                            image: 'ext:舰R美化/c17dipai.png',
+                        "c1dipai9": {
+                            image: 'ext:舰R美化/image/c1dipai9.png',
                             type: "equip",
                             subtype: "equip5",
                             fullskin: true,
@@ -3140,8 +3140,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        xunyou9: {
-                            image: 'ext:舰R美化/xunyou9.png',
+                        huangjiaxunyou9: {
+                            image: 'ext:舰R美化/image/huangjiaxunyou9.png',
                             audio: true,
                             type: "trick",
                             enable: true,
@@ -3329,8 +3329,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             fullskin: true,
                         },
-                        "paohuofg9": {
-                            image: 'ext:舰R美化/paohuofg9.png',
+                        "paohuofugai9": {
+                            image: 'ext:舰R美化/image/paohuofugai9.png',
                             fullskin: true,
                             audio: true,
                             type: "trick",
@@ -3431,8 +3431,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "micaiwz9": {
-                            image: 'ext:舰R美化/micaiwz9.png',
+                        "micaiweizhuang9": {
+                            image: 'ext:舰R美化/image/micaiweizhuang9.png',
 
                             fullskin: true,
                             type: "equip",
@@ -3493,8 +3493,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "gaojingld9": {
-                            image: 'ext:舰R美化/gaojingld9.png',
+                        "gaojingleida9": {
+                            image: 'ext:舰R美化/image/gaojingleida9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip3",
@@ -3554,8 +3554,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "guolu9": {
-                            image: 'ext:舰R美化/guolu9.png',
+                        "dongliguolu9": {
+                            image: 'ext:舰R美化/image/dongliguolu9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip4",
@@ -3615,8 +3615,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        "yingjizp9": {
-                            image: 'ext:舰R美化/yingjizp9.png',
+                        "huolipingtai9": {
+                            image: 'ext:舰R美化/image/huolipingtai9.png',
                             fullskin: true,
                             type: "equip",
                             subtype: "equip1",
@@ -3681,8 +3681,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: true,
                         },
-                        "toudx9": {
-                            image: 'ext:舰R美化/toudx9.png',
+                        "weizaoqingbao9": {
+                            image: 'ext:舰R美化/image/weizaoqingbao9.png',
                             audio: true,
                             fullskin: true,
                             type: "trick",
@@ -3758,9 +3758,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             selectTarget: 1,
                         },
-                        "jinjuzy": {
+                        "jinjuzhiyuan9": {
                             audio: true,
-                            image: 'ext:舰R美化/jinjuzy.jpg',
+                            image: 'ext:舰R美化/image/jinjuzhiyuan9.jpg',
                             type: "trick",
                             //fullimage: true,
                             fullskin: true,
@@ -3846,8 +3846,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 },
                             },
                         },
-                        jiakongls: {
-                            image: 'ext:舰R美化/jiakongls.jpg',
+                        jiakonglishi9: {
+                            image: 'ext:舰R美化/image/jiakonglishi9.png',
                             audio: true,
                             type: "trick",
                             enable: true,
@@ -4006,7 +4006,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                         _status.dieClose.remove(dialog);
                                     }
                                 }, event.preResult);
-                                game.addVideo('cardDialog', null, event.preResult); if (!player.countMark('jiakongls')) { player.addMark('jiakongls'); player.chooseUseTarget(true, 'jiakongls') };
+                                game.addVideo('cardDialog', null, event.preResult); if (!player.countMark('jiakonglishi9')) { player.addMark('jiakonglishi9'); player.chooseUseTarget(true, 'jiakonglishi9') };
                             },
                             ai: {
                                 wuxie: function () {
@@ -4036,8 +4036,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             //fullimage: true,
                         },
-                        mingzuyq: {
-                            image: 'ext:舰R美化/mingzuyq.jpg',
+                        mingzuyueqi9: {
+                            image: 'ext:舰R美化/image/mingzuyueqi9.png',
                             audio: true,
                             mode: ["guozhan"],
                             type: "equip",
@@ -4115,9 +4115,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                             //fullimage: true,
                         },
-                        hangkongzhan: {
-                            audio: "ext:舰R美化/audio/skill:true",
-                            image: 'ext:舰R美化/hangkongzhan.png',
+                        hangkongzhan9: {
+                            audio: "ext:舰R美化/image/audio/skill:true",
+                            image: 'ext:舰R美化/image/hangkongzhan9.png',
                             type: "equip",
                             subtype: "equip4",
                             fullskin: true,
@@ -4179,8 +4179,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                             //fullimage: true,
                         },
-                        paohuozb: {
-                            image: 'ext:舰R美化/paohuozb.png',
+                        paohuozhunbei9: {
+                            image: 'ext:舰R美化/image/paohuozhunbei9.png',
                             type: "equip",
                             subtype: "equip1",
                             distance: {
@@ -4229,7 +4229,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     },
                                 },
                             },
-                            skills: ["paohuozb_skill"],
+                            skills: ["paohuozhunbei9_skill"],
                             enable: true,
                             selectTarget: -1,
                             filterTarget: function (card, player, target) {
@@ -4243,8 +4243,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             toself: true,
                             fullskin: true,
                         },
-                        qiangliguibi: {
-                            image: 'ext:舰R美化/qiangliguibi.png',
+                        qiangliguibi9: {
+                            image: 'ext:舰R美化/image/qiangliguibi9.png',
                             type: "equip",
                             subtype: "equip3",
                             fullskin: true,
@@ -4302,8 +4302,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             toself: false,
                         },
-                        lianxugongji: {
-                            image: 'ext:舰R美化/yishichuanjiadan.png',
+                        lianxugongji9: {
+                            image: 'ext:舰R美化/image/lianxugongji9.png',
                             type: "basic",
                             enable: true,
                             selectTarget: 1,
@@ -4497,7 +4497,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             "_priority": 0,
                         },
-                        "paohuozb_skill": {
+                        "paohuozhunbei9_skill": {
                             mod: {
                                 maxHandcard: function (player, num) { return num - 1; },
                                 cardUsable: function (card, player, num) { if (card.name == 'sha') return num + 1; },
@@ -4508,7 +4508,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             forced: true,
                             equipSkill: true,
                             filter: function (event, player) {
-                                return event.card.name == 'paohuozb';
+                                return event.card.name == 'paohuozhunbei9';
                             },
                             content: function () {
                                 //player.loseHp();
@@ -4536,9 +4536,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 })) return false;
                                 if (event.card.name == 'nanman') return true;
                                 if (event.card.name == 'wanjian') return true;
-                                if (event.card.name == 'zhiyuangj9') return true;
-                                if (event.card.name == 'manchangyy9') return true;
-                                if (event.card.name == 'jinjuzy') return true;
+                                if (event.card.name == 'zhiyuangongji9') return true;
+                                if (event.card.name == 'manchangyiyi9') return true;
+                                if (event.card.name == 'jinjuzhiyuan9') return true;
                                 return false;
                             },
                             content: function () {
@@ -4558,7 +4558,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                             card: card
                                         })) return;
                                         //if(card.name=='nanman'||card.name=='wanjian'||card.name=='chuqibuyi') return 'zerotarget';
-                                        if (card.name == 'nanman' || card.name == 'wanjian' || card.name == 'zhiyuangj9' || card.name == 'manchangyy9') return 'zerotarget';
+                                        if (card.name == 'nanman' || card.name == 'wanjian' || card.name == 'zhiyuangongji9' || card.name == 'manchangyiyi9') return 'zerotarget';
                                         if (card.name == 'sha') {
                                             var equip1 = player.getEquip(1);
                                             if (equip1 && equip1.name == 'zhuque') return 1.9;
@@ -4657,7 +4657,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 cardname: function (card, player, name) {
                                     if (card.name == 'sheji9') { return 'sha'; }; if (card.name == 'huibi9') { return 'shan'; }; if (card.name == 'zhikongquan9') { return 'wuxie'; }; if (card.name == 'kuaixiu9') { return 'tao'; }; if (card.name == 'zziqi9') { return 'jiu'; };
                                     if (card.name == 'juedouba9') { return 'juedou'; };
-                                    if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'nobuji9') { return 'bingliang'; };
+                                    if (card.name == 'leibusigang9') { return 'lebu'; }; if (card.name == 'pojiaoxiji9') { return 'bingliang'; };
                                 },
                             },
                         },
@@ -4902,7 +4902,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                             "_priority": 0,
                         },
-                        changshecheng: {
+                        changshecheng9: {
                             equipSkill: true,
                             audio: true,
                             firstDo: true,
@@ -5196,40 +5196,40 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "_kapaizhuanhua_muniu": "木牛卡牌",
                         "huibi9": "回避",
                         "huibi9_info": "抵消一张【射击】",
-                        "puliesai9": "防雷装甲",
-                        "puliesai9_info": "锁定技，你每次受到伤害时，最多承受1点伤害（防止多余的伤害）；当你失去装备区里的【防雷装甲】时，你回复1点体力。",
-                        "nobuji9": "破交袭击",
-                        "nobuji9_info": "目标角色判定阶段进行判定：若判定结果不为梅花，则跳过该角色的摸牌阶段。",
-                        "dongli9": "动力(改良)",
-                        "dongli9_info": "锁定技，你计算与其他角色的距离-1。",
+                        "fangleizhuangjia9": "防雷装甲",
+                        "fangleizhuangjia9_info": "锁定技，你每次受到伤害时，最多承受1点伤害（防止多余的伤害）；当你失去装备区里的【防雷装甲】时，你回复1点体力。",
+                        "pojiaoxiji9": "破交袭击",
+                        "pojiaoxiji9_info": "目标角色判定阶段进行判定：若判定结果不为梅花，则跳过该角色的摸牌阶段。",
+                        "dongligailiang9": "动力(改良)",
+                        "dongligailiang9_info": "锁定技，你计算与其他角色的距离-1。",
                         "fayantong9": "发烟筒",
                         "fayantong9_info": "锁定技，其他角色计算与你的距离+1。",
-                        "jiaohuan9": "快递箱",
-                        "jiaohuan9_info": "锁定技，其他角色计算与你的距离+1。",
+                        "kuaidixiang9": "快递箱",
+                        "kuaidixiang9_info": "锁定技，其他角色计算与你的距离+1。",
                         "bigseven9": "BIGSEVEN",
                         "bigseven9_info": "使用杀可以额外指定一名距离为1角色为目标",
-                        "shangyouyh9": "上游一号",
-                        "shangyouyh9_info": "当你使用的【射击】被目标角色使用的【闪】抵消时，你可以弃置两张牌，令此【射击】依然对其造成伤害。",
+                        "shangyouyihao9": "上游一号",
+                        "shangyouyihao9_info": "当你使用的【射击】被目标角色使用的【闪】抵消时，你可以弃置两张牌，令此【射击】依然对其造成伤害。",
                         "xiji9": "偷袭",
                         "xiji9_info": "出牌阶段，对区域里有牌的一名其他角色使用。你弃置其区域里的一张牌。",
-                        "chuanjiadan9": "超重弹",
-                        "chuanjiadan9_info": "当你使用射击造成伤害时，你可以防止此伤害，改为依次弃置目标角色的两张牌。",
+                        "chaozhongdan9": "超重弹",
+                        "chaozhongdan9_info": "当你使用射击造成伤害时，你可以防止此伤害，改为依次弃置目标角色的两张牌。",
                         "zziqi9": "z字旗",
                         "zziqi9_info": "出牌阶段，对自己使用，令自己的下一张使用的【射击】造成的伤害+1（每回合限使用1次）；濒死阶段，对自己使用，回复1点体力",
                         "juedouba9": "决斗，吧",
                         "juedouba9_info": "出牌阶段，对一名其他角色使用。由其开始，其与你轮流打出一张【射击】，直到其中一方未打出【射击】为止。未打出【射击】的一方受到另一方对其造成的1点伤害。",
                         "leibusigang9": "乐不思港",
                         "leibusigang9_info": "出牌阶段，对一名其他角色使用。若判定结果不为红桃，跳过其出牌阶段。",
-                        "manchangyy9": "漫长一役",
-                        "manchangyy9_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【射击】，否则受到1点伤害。",
-                        "huojiandan9": "断腿火箭",
-                        "huojiandan9_info": "当你使用【射击】对目标角色造成伤害时，你可以弃置其装备区里的一张坐骑牌。",
-                        "chuanjiayl9": "穿甲鱼雷",
-                        "chuanjiayl9_info": "锁定技，当你使用【射击】指定一名目标角色后，你令其防具技能无效直到此【射击】被抵消或造成伤害。",
+                        "manchangyiyi9": "漫长一役",
+                        "manchangyiyi9_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【射击】，否则受到1点伤害。",
+                        "duantuihuojian9": "断腿火箭",
+                        "duantuihuojian9_info": "当你使用【射击】对目标角色造成伤害时，你可以弃置其装备区里的一张坐骑牌。",
+                        "chuanjiayulei9": "穿甲鱼雷",
+                        "chuanjiayulei9_info": "锁定技，当你使用【射击】指定一名目标角色后，你令其防具技能无效直到此【射击】被抵消或造成伤害。",
                         "jianzaihuojiandan9": "火箭弹",
                         "jianzaihuojiandan9_info": "当你使用的【射击】被目标角色使用的【闪】抵消时，你可以对其使用一张【射击】（无距离限制）。",
-                        "qingjia9": "黑色装甲",
-                        "qingjia9_info": "锁定技，黑色的射击对你无效",
+                        "heisezhuangjia9": "黑色装甲",
+                        "heisezhuangjia9_info": "锁定技，黑色的射击对你无效",
                         "sheji9": "射击",
                         "sheji9_info": "出牌阶段，对你攻击范围内的一名角色使用。其须使用一张【闪】，否则你对其造成1点伤害。",
                         "jingjieleida9": "警戒雷达",
@@ -5242,12 +5242,12 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "kuaixiu9_info": "出牌阶段，对自己使用，回复一点体力。",
                         "jingjixiuli9": "紧急修理",
                         "jingjixiuli9_info": "出牌阶段，对所有角色使用。每名目标角色回复1点体力。",
-                        "zhongjia9": "重型装甲",
-                        "zhongjia9_info": "锁定技，【南蛮入侵】、【万箭齐发】、普通【射击】和HE【射击】对你无效。当你需要响应雷击时需要出两张闪，受到雷电伤害时，该伤害+1。",
-                        "lastfriend9": "最后的队友",
-                        "lastfriend9_info": "出牌阶段使用，选择2个角色，分别横置或重置这些角色。若包含队友，则令你与目标摸一张牌。",
-                        "zhiyuangj9": "支援攻击",
-                        "zhiyuangj9_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【闪】，否则受到1点伤害。",
+                        "zhongxingzhuangjia9": "重型装甲",
+                        "zhongxingzhuangjia9_info": "锁定技，【南蛮入侵】、【万箭齐发】、普通【射击】和HE【射击】对你无效。当你需要响应雷击时需要出两张闪，受到雷电伤害时，该伤害+1。",
+                        "zuihoudeduiyou9": "最后的队友",
+                        "zuihoudeduiyou9_info": "出牌阶段使用，选择2个角色，分别横置或重置这些角色。若包含队友，则令你与目标摸一张牌。",
+                        "zhiyuangongji9": "支援攻击",
+                        "zhiyuangongji9_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【闪】，否则受到1点伤害。",
                         "zhikongquan9": "制空权",
                         "zhikongquan9_info": "一张锦囊牌生效前，对此牌使用。抵消此牌对一名角色产生的效果，或抵消另一张【无懈可击】产生的效果。",
                         "ewaibuji9": "补给",
@@ -5258,34 +5258,34 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         "changshecheng9_info": "锁定技，你于出牌阶段内使用【射击】的次数+1。",
                         "gaobaodan9": "燃烧弹",
                         "gaobaodan9_info": "你可以将一张普通【射击】当具火焰伤害的【射击】使用。",
-                        "chaozhongdan9": "爆雷奇袭",
-                        "chaozhongdan9_info": "锁定技，当你使用【射击】对目标角色造成伤害时，若其没有手牌，此伤害+1。",
-                        "caiseyulei9": "弃牌穿甲弹",
-                        "caiseyulei9_info": "当你使用【射击】指定一名不同势力的目标角色后，其可以选择一项：1.弃置一张手牌；2.令你摸一张牌。",
+                        "baoleiqixi9": "爆雷奇袭",
+                        "baoleiqixi9_info": "锁定技，当你使用【射击】对目标角色造成伤害时，若其没有手牌，此伤害+1。",
+                        "qipaichuanjiadan9": "弃牌穿甲弹",
+                        "qipaichuanjiadan9_info": "当你使用【射击】指定一名不同势力的目标角色后，其可以选择一项：1.弃置一张手牌；2.令你摸一张牌。",
                         "zhenchaji9": "侦察机",
                         "zhenchaji9_info": "锁定技，其他角色的手牌对你可见。",
-                        "donglixj9": "动力(先进)",
-                        "donglixj9_info": "锁定技，你计算与其他角色的距离-1。",
+                        "donglixianjin9": "动力(先进)",
+                        "donglixianjin9_info": "锁定技，你计算与其他角色的距离-1。",
                         "zhaomingdan9": "照明弹",
                         "zhaomingdan9_info": "目标角色展示一张手牌，然后若你能弃掉一张与所展示牌相同花色的手牌，则对该角色造成1点火焰伤害。",
-                        "c17dipai": "c-1递牌",
-                        "c17dipai_info": "出牌阶段限一次。你可以将一张手牌交给一名其他角色。",
-                        huojiandan9: "断腿火箭",
-                        "huojiandan9_info": "当你使用【射击】对目标角色造成伤害时，你可以弃置其装备区里的一张马达牌。",
-                        xunyou9: "皇家巡游",
-                        "xunyou9_info": "出牌阶段，对所有角色使用。（选择目标后）你从牌堆顶亮出等同于目标数量的牌，每名目标角色获得这些牌中（剩余的）的任意一张。",
-                        "paohuofg9": "炮火覆盖",
-                        "paohuofg9_info": "当场上没有横置角色时，你可以选择1~2名角色横置；当场上有横置角色时，对离你最近的一名横置角色(可能是自己）使用，对目标造成一点火焰伤害。",
-                        "micaiwz9": "迷彩伪装",
-                        "micaiwz9_info": "锁定技，其他角色计算与你的距离+1。",
-                        "gaojingld9": "雷达告警",
-                        "gaojingld9_info": "锁定技，其他角色计算与你的距离+1。",
-                        "guolu9": "动力(锅炉)",
-                        "guolu9_info": "锁定技，你计算与其他角色的距离-1。",
-                        "yingjizp9": "火力平台",
-                        "yingjizp9_info": "你可以将两张手牌当【射击】使用或打出，用于应急。",
-                        "toudx9": "伪造情报",
-                        "toudx9_info": "出牌阶段，对装备区里有武器牌且有使用【射击】的目标的一名其他角色使用。令其对你指定的一名角色使用一张【射击】，否则将其装备区里的武器牌交给你。",
+                        "c1dipai9": "c-1递牌",
+                        "c1dipai9_info": "出牌阶段限一次。你可以将一张手牌交给一名其他角色。",
+                        duantuihuojian9: "断腿火箭",
+                        "duantuihuojian9_info": "当你使用【射击】对目标角色造成伤害时，你可以弃置其装备区里的一张马达牌。",
+                        huangjiaxunyou9: "皇家巡游",
+                        "huangjiaxunyou9_info": "出牌阶段，对所有角色使用。（选择目标后）你从牌堆顶亮出等同于目标数量的牌，每名目标角色获得这些牌中（剩余的）的任意一张。",
+                        "paohuofugai9": "炮火覆盖",
+                        "paohuofugai9_info": "当场上没有横置角色时，你可以选择1~2名角色横置；当场上有横置角色时，对离你最近的一名横置角色(可能是自己）使用，对目标造成一点火焰伤害。",
+                        "micaiweizhuang9": "迷彩伪装",
+                        "micaiweizhuang9_info": "锁定技，其他角色计算与你的距离+1。",
+                        "gaojingleida9": "雷达告警",
+                        "gaojingleida9_info": "锁定技，其他角色计算与你的距离+1。",
+                        "dongliguolu9": "动力(锅炉)",
+                        "dongliguolu9_info": "锁定技，你计算与其他角色的距离-1。",
+                        "huolipingtai9": "火力平台",
+                        "huolipingtai9_info": "你可以将两张手牌当【射击】使用或打出，用于应急。",
+                        "weizaoqingbao9": "伪造情报",
+                        "weizaoqingbao9_info": "出牌阶段，对装备区里有武器牌且有使用【射击】的目标的一名其他角色使用。令其对你指定的一名角色使用一张【射击】，否则将其装备区里的武器牌交给你。",
                         "tiejia1": "铁甲1",
                         "tiejia1_info": "锁定技，【南蛮入侵】、【万箭齐发】、普通【杀】和火【杀】对你无效。当你需要响应雷杀时需要出两张闪，受到雷电伤害时，该伤害+1。",
                         "tiejia2": "铁甲2",
@@ -5297,29 +5297,29 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         fangtian_guozhan_R: "BigSeven",
                         fangtian_guozhan_R_info: "当你使用杀指定目标后，你可额外指定至多三名手牌数大于你的角色也成为此杀目标，若任意一名角色使用闪抵消了此【杀】，则此【杀】对其余角色也无效。",
 
-                        "changshecheng": "长射程",
-                        "changshecheng_info": "锁定技，你于出牌阶段内使用【射击】的次数+1。",
-                        zhikongwuxie: "制空权",
-                        "zhikongwuxie_info": "",
+                        "changshecheng9": "长射程",
+                        "changshecheng9_info": "锁定技，你于出牌阶段内使用【射击】的次数+1。",
+                        zhikongquan9: "制空权",
+                        "zhikongquan9_info": "",
                         shashanwuxietao: "卡牌兼容",
                         "shashanwuxietao_info": "杀闪桃无懈，无名杀的卡牌不容易互换，需要技能龙魂的帮助",
 
                         //舰r牌将移植
-                        jinjuzy: "近距支援",
-                        "jinjuzy_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【闪】，否则受到1点伤害。",
-                        jiakongls: "架空历史",
-                        "jiakongls_info": "群星璀璨，欧陆风云，该武将首次使用会有两轮1.5展示牌量的五谷丰登，再次使用仅有一轮。",
-                        mingzuyq: "民族乐器",
-                        "mingzuyq_info": "北境之地的文化艺术。锁定技，你视为拥有技能国战“制衡”，若你已经有“制衡”，则改为取消可弃置牌数的限制。",
-                        hangkongzhan: "航空战",
-                        "hangkongzhan_info": "建树丰厚，参与每轮开始时的三连杀战斗吗，每轮最多弃置三张牌。",
-                        paohuozb: "炮火准备",
-                        "paohuozb_info": "你的杀的使用次数+1，手牌上限-1。",
-                        "paohuozb_skill": "炮火准备1", "paohuozb_skill_info": "装备技能",
-                        qiangliguibi: "强力规避",
-                        "qiangliguibi_info": "可以进行一次判定，为桃、闪则视为打出闪。<br>若判定未生效,会获得判定牌。<br>若武将为驱逐且没有判定成功，可以额外触发一次。",
-                        lianxugongji: "连续攻击",
-                        "lianxugongji_info": "其实就是杀，但此杀能连打两次。。",
+                        jinjuzhiyuan9: "近距支援",
+                        "jinjuzhiyuan9_info": "出牌阶段，对所有其他角色使用。每名目标角色需打出一张【闪】，否则受到1点伤害。",
+                        jiakonglishi9: "架空历史",
+                        "jiakonglishi9_info": "群星璀璨，欧陆风云，该武将首次使用会有两轮1.5展示牌量的五谷丰登，再次使用仅有一轮。",
+                        mingzuyueqi9: "民族乐器",
+                        "mingzuyueqi9_info": "北境之地的文化艺术。锁定技，你视为拥有技能国战“制衡”，若你已经有“制衡”，则改为取消可弃置牌数的限制。",
+                        hangkongzhan9: "航空战",
+                        "hangkongzhan9_info": "建树丰厚，参与每轮开始时的三连杀战斗吗，每轮最多弃置三张牌。",
+                        paohuozhunbei9: "炮火准备",
+                        "paohuozhunbei9_info": "你的杀的使用次数+1，手牌上限-1。",
+                        "paohuozhunbei9_skill": "炮火准备1", "paohuozhunbei9_skill_info": "装备技能",
+                        qiangliguibi9: "强力规避",
+                        "qiangliguibi9_info": "可以进行一次判定，为桃、闪则视为打出闪。<br>若判定未生效,会获得判定牌。<br>若武将为驱逐且没有判定成功，可以额外触发一次。",
+                        lianxugongji9: "连续攻击",
+                        "lianxugongji9_info": "其实就是杀，但此杀能连打两次。。",
                         //舰r牌将移植结束
                     },
                     list: [
@@ -5380,29 +5380,29 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 
                         ["spade", 2, "jingjieleida9"],
                         ["club", 2, "jingjieleida9"],
-                        ["spade", 5, "donglixj9"],
-                        ["club", 5, "micaiwz9"],
-                        ["heart", 13, "gaojingld9"],
-                        ["heart", 5, "guolu9"],
-                        ["spade", 13, "dongli9"],
+                        ["spade", 5, "donglixianjin9"],
+                        ["club", 5, "micaiweizhuang9"],
+                        ["heart", 13, "gaojingleida9"],
+                        ["heart", 5, "dongliguolu9"],
+                        ["spade", 13, "dongligailiang9"],
                         ["diamond", 13, "fayantong9"],
                         ["club", 1, "changshecheng9"],
                         ["diamond", 1, "sushepao9"],
-                        ["spade", 2, "caiseyulei9"],
-                        ["spade", 6, "chuanjiayl9"],
+                        ["spade", 2, "qipaichuanjiadan9"],
+                        ["spade", 6, "chuanjiayulei9"],
                         ["spade", 5, "jianzaihuojiandan9"],
-                        ["spade", 12, "yingjizp9"],
-                        ["diamond", 5, "shangyouyh9"],
+                        ["spade", 12, "huolipingtai9"],
+                        ["diamond", 5, "shangyouyihao9"],
                         ["diamond", 12, "bigseven9"],
-                        ["heart", 5, "huojiandan9"],
+                        ["heart", 5, "duantuihuojian9"],
 
-                        ["heart", 3, "xunyou9"],
-                        ["heart", 4, "xunyou9"],
+                        ["heart", 3, "huangjiaxunyou9"],
+                        ["heart", 4, "huangjiaxunyou9"],
                         ["heart", 1, "jingjixiuli9"],
-                        ["spade", 7, "manchangyy9"],
-                        ["spade", 13, "manchangyy9"],
-                        ["club", 7, "manchangyy9"],
-                        ["heart", 1, "zhiyuangj9"],
+                        ["spade", 7, "manchangyiyi9"],
+                        ["spade", 13, "manchangyiyi9"],
+                        ["club", 7, "manchangyiyi9"],
+                        ["heart", 1, "zhiyuangongji9"],
                         ["spade", 1, "juedouba9"],
                         ["club", 1, "juedouba9"],
                         ["diamond", 1, "juedouba9"],
@@ -5421,8 +5421,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["club", 3, 'xiji9'],
                         ["club", 4, 'xiji9'],
                         ["heart", 12, 'xiji9'],
-                        ["club", 12, 'toudx9'],
-                        ["club", 13, 'toudx9'],
+                        ["club", 12, 'weizaoqingbao9'],
+                        ["club", 13, 'weizaoqingbao9'],
                         ["spade", 11, 'zhikongquan9'],
                         ["club", 12, 'zhikongquan9'],
                         ["club", 13, 'zhikongquan9'],
@@ -5430,8 +5430,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["club", 6, 'leibusigang9'],
                         ["heart", 6, 'leibusigang9'],
                         ["spade", 1, 'jimihuowu9'],
-                        ["spade", 2, 'chuanjiadan9'],
-                        ["club", 2, 'qingjia9'],
+                        ["spade", 2, 'chaozhongdan9'],
+                        ["club", 2, 'heisezhuangjia9'],
                         ["heart", 12, 'jimihuowu9'],
                         ["diamond", 12, 'zhikongquan9'],
                         ["heart", 4, "sheji9", "fire"],
@@ -5467,37 +5467,37 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         ["club", 3, "zziqi9"],
                         ["club", 9, "zziqi9"],
 
-                        ["diamond", 13, "jiaohuan9"],
-                        ["club", 1, "puliesai9"],
-                        ["spade", 2, "zhongjia9"],
-                        ["club", 2, "zhongjia9"],
-                        ["spade", 1, "chaozhongdan9"],
+                        ["diamond", 13, "kuaidixiang9"],
+                        ["club", 1, "fangleizhuangjia9"],
+                        ["spade", 2, "zhongxingzhuangjia9"],
+                        ["club", 2, "zhongxingzhuangjia9"],
+                        ["spade", 1, "baoleiqixi9"],
                         ["diamond", 1, "gaobaodan9"],
 
                         ["heart", 2, "zhaomingdan9"],
                         ["heart", 3, "zhaomingdan9"],
-                        ["heart", 3, "paohuofg9"],
+                        ["heart", 3, "paohuofugai9"],
                         ["diamond", 12, "zhaomingdan9"],
-                        ["spade", 11, "lastfriend9"],
-                        ["spade", 12, "lastfriend9"],
-                        ["club", 10, "lastfriend9"],
-                        ["club", 11, "lastfriend9"],
-                        ["club", 12, "lastfriend9"],
-                        ["club", 13, "lastfriend9"],
+                        ["spade", 11, "zuihoudeduiyou9"],
+                        ["spade", 12, "zuihoudeduiyou9"],
+                        ["club", 10, "zuihoudeduiyou9"],
+                        ["club", 11, "zuihoudeduiyou9"],
+                        ["club", 12, "zuihoudeduiyou9"],
+                        ["club", 13, "zuihoudeduiyou9"],
                         ["heart", 1, "zhikongquan9"],
                         ["heart", 13, "zhikongquan9"],
                         ["spade", 13, "zhikongquan9"],
-                        ["spade", 10, "nobuji9"],
-                        ["club", 4, "nobuji9"],
+                        ["spade", 10, "pojiaoxiji9"],
+                        ["club", 4, "pojiaoxiji9"],
                         ['diamond', 5, 'zhenchaji9'],
-                        ['diamond', 5, 'c17dipai'],
+                        ['diamond', 5, 'c1dipai9'],
                         //舰r牌将移植
-                        ["heart", 1, "hangkongzhan"],
-                        ["diamond", 1, "qiangliguibi"],
-                        //["spade", 1, "lianxugongji"],
-                        //["club", 1, "jinjuzy"],
-                        ["heart", 1, "jiakongls"],
-                        ["spade", 1, "paohuozb"],
+                        ["heart", 1, "hangkongzhan9"],
+                        ["diamond", 1, "qiangliguibi9"],
+                        //["spade", 1, "lianxugongji9"],
+                        //["club", 1, "jinjuzhiyuan9"],
+                        ["heart", 1, "jiakonglishi9"],
+                        ["spade", 1, "paohuozhunbei9"],
                         //舰r牌将牌堆移植结束
 
                     ],//牌堆添加
