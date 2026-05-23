@@ -3760,7 +3760,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         },
                         "jinjuzhiyuan9": {
                             audio: true,
-                            image: 'ext:舰R美化/image/jinjuzhiyuan9.jpg',
+                            image: 'ext:舰R美化/image/jinjuzhiyuan9.png',
                             type: "trick",
                             //fullimage: true,
                             fullskin: true,
@@ -4116,7 +4116,6 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             //fullimage: true,
                         },
                         hangkongzhan9: {
-                            audio: "ext:舰R美化/image/audio/skill:true",
                             image: 'ext:舰R美化/image/hangkongzhan9.png',
                             type: "equip",
                             subtype: "equip4",
@@ -4190,7 +4189,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 basic: {
                                     equipValue: 2,
                                     order: function (card, player) {
-                                        if (player.hp > 2) return true
+                                        if (player.hp > 2) return 1;
                                         if (player && player.hasSkillTag('reverseEquip')) {
                                             return 2.5 - get.equipValue(card, player) / 20;
                                         }
