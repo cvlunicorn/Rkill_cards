@@ -1653,7 +1653,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             content: function () {
                                 event.result = 'shaned';
                                 event.getParent().delayx = false;
-                                game.delay(0.5);
+                                game.delayx(0.5);
                             },
                             ai: {
                                 order: 3,
@@ -3016,7 +3016,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                     }
                                     return -1;
                                 }).set('prompt', false);
-                                game.delay(2);
+                                game.delayx(2);
                                 "step 2"
                                 if (result.bool) {
                                     target.damage('fire', event.baseDamage || 1);
@@ -3274,7 +3274,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 dialog.content.firstChild.innerHTML = capt;
                                 game.addVideo('dialogCapt', null, [dialog.videoId, dialog.content.firstChild.innerHTML]);
                                 game.log(target, '选择了', button.link);
-                                game.delay();
+                                game.delayx();
                             },
                             contentAfter: function () {
                                 for (var i = 0; i < ui.dialogs.length; i++) {
@@ -3781,7 +3781,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 if (typeof event.baseDamage != 'number') event.baseDamage = 1;
                                 if (event.directHit) event._result = { bool: false };
                                 else {
-                                    var next = target.chooseToRespond({ name: 'shan' || 'huibi9' });
+                                    var next = target.chooseToRespond({ name: 'shan'});
                                     next.set('ai', function (card) {
                                         var evt = _status.event.getParent();
                                         if (get.damageEffect(evt.target, evt.player, evt.target) >= 0) return 0;
@@ -3796,7 +3796,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 }
                                 "step 1"
                                 if (result.bool == false) {
-                                    if (target.getEquip(2) != 'tengjia') target.damage(event.baseDamage);
+                                    if (target.getEquip(2).name != 'tengjia') target.damage(event.baseDamage);
                                 }
                             },
                             ai: {
@@ -3981,7 +3981,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 dialog.content.firstChild.innerHTML = capt;
                                 game.addVideo('dialogCapt', null, [dialog.videoId, dialog.content.firstChild.innerHTML]);
                                 game.log(target, '选择了', button.link);
-                                game.delay();
+                                game.delayx();
                             },
                             contentAfter: function () {
                                 for (var i = 0; i < ui.dialogs.length; i++) {
@@ -4429,7 +4429,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                         case "kuaixiu9":
                                             name = "tao";
                                             break;
-                                        case "Zziqi9":
+                                        case "zziqi9":
                                             name = "jiu";
                                             break;
                                     }
@@ -4459,7 +4459,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                                 if (filter(get.autoViewAs({ name: "shan" }, "unsure"), player, event) && player.countCards("s", { name: "huibi9" })) return true;
                                 if (filter(get.autoViewAs({ name: "tao" }, "unsure"), player, event) && player.countCards("s", { name: "kuaixiu9" })) return true;
                                 if (filter(get.autoViewAs({ name: "wuxie" }, "unsure"), player, event) && player.countCards("s", { name: "zhikongquan9" })) return true;
-                                if (filter(get.autoViewAs({ name: "jiu" }, "unsure"), player, event) && player.countCards("s", { name: "Zziqi9" })) return true;
+                                if (filter(get.autoViewAs({ name: "jiu" }, "unsure"), player, event) && player.countCards("s", { name: "zziqi9" })) return true;
                                 return false;
                             },
                             precontent() {
